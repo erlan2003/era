@@ -1,0 +1,19 @@
+{% extends 'main/layout.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "Главная страница" %}{% endblock %}
+
+{% block content %}
+
+    {% for el in attractions %}
+        <div class="alert alert-warning">
+            <h3>{{ el.attraction }}</h3>
+            <div class="attraction-info">
+                <p><strong>{% trans "Тип достопримечательности:" %}</strong> {{ el.attraction_type }}</p>
+                <p><strong>{% trans "Регион:" %}</strong> {{ el.region }}</p>
+                <p><strong>{% trans "Информация:" %}</strong> {{ el.information }}</p>
+                <a href="{% url 'attraction-detail' el.id %}" class="btn btn-success" type="submit">{% trans "Читать детальнее" %} </a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

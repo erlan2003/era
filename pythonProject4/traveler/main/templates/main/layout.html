@@ -1,0 +1,79 @@
+{% load static %}
+{% load static i18n %}
+
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>{% block title%}{% endblock%}</title>
+</head>
+<body>
+
+<div class='header'>
+    <div class='container'>
+        <div class='header-line'>
+            <div class='header-logo'>
+                <img src="{% static 'main/img/logo.png' %}" alt="">
+            </div>
+
+            <div class='nav'>
+                <a class='nav-item' href="{% url 'home' %}">{% trans "ГЛАВНАЯ" %}</a>
+                <a class='nav-item' href="{% url 'tours' %}">{% trans "ТУРЫ" %}</a>
+                <a class='nav-item' href="{% url 'about' %}">{% trans "О НАС" %}</a>
+                <a class='nav-item' href="{% url 'cooperation' %}">{% trans "СОТРУДНИЧЕСТВО" %}</a>
+                <a class="nav-item" href="{% url 'add_attraction' %}">{% trans "ДОБАВИТЬ ДОСТОПРИМЕЧАТЕЛЬНОСЬ" %}</a>
+            </div>
+
+            <div class='cart'>
+                <a href="#">
+                    <img class='cart-img'>
+                </a>
+            </div>
+            <div class='phone'>
+                <div class='phone-holder'>
+                    <div class='phone-img'>
+                        <img src="{% static 'main/img/phone.png' %}" alt="">
+                    </div>
+
+                    <div class='number'><a class='num' href='#'>+996 709-16-23-33</a></div>
+                </div>
+
+                <div class='phone-text'>
+                    {% trans "При возникновение вопросов" %} <br> {% trans "свяжитесь с нами" %}
+                </div>
+            </div>
+
+            <div class='btn'>
+                <a class='button' href="{% url 'login' %}">{% trans "АВТОРИЗАЦИЯ" %}</a>
+            </div>
+
+            <form action="{% url 'set_language' %}" method="post">
+    {% csrf_token %}
+    <input name="next" type="hidden" value="{{ redirect_to }}">
+    <select name="language" id="language-selector">
+        {% get_current_language as current_language %}
+        {% get_available_languages as available_languages %}
+        {% get_language_info_list for available_languages as languages %}
+        {% for language in languages %}
+            <option value="{{ language.code }}" {% if language.code == current_language %}selected{% endif %}>
+                {{ language.name_local }} ({{ language.code }})
+            </option>
+        {% endfor %}
+    </select>
+    <button type="submit">{% trans "Изменить язык" %}</button>
+</form>
+
+        </div>
+    </div>
+</div>
+<main>
+    {% block content %}
+    <p>{% trans "Информация" %}</p>
+     {% endblock %}
+</main>
+</body>
+</html>

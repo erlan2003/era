@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "Добавление комментарий" %}{% endblock %}
+
+{% block content %}
+    <h2>{% trans "Добавить комментарии" %}</h2>
+        <form method="post" action="{% url 'add_comment' attraction.id%}">
+            {% csrf_token %}
+            <input type="hidden" name="user" value="{{ user }}">
+            <input type="hidden" name="attraction" value="{{ attraction.id }}">
+            {{ form.subject }}<br>
+            {{ form.message }}<br>
+            <span> {{ error }}</span>
+            <button class="btn btn-success" type="submit">{% trans "Добавить комментарий" %}</button>
+        </form>
+{% endblock %}

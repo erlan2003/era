@@ -1,0 +1,154 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-07 03:00+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: .\main\templates\main\about.html:4
+msgid "О нас"
+msgstr "About Us"
+
+#: .\main\templates\main\about.html:7
+msgid "Информация о нас"
+msgstr "Information about us"
+
+#: .\main\templates\main\add_attraction.html:4
+msgid "Добавление достопримечательности"
+msgstr "Adding attractions"
+
+#: .\main\templates\main\add_attraction.html:15
+msgid "Добавить достопримечательность"
+msgstr "Add attraction"
+
+#: .\main\templates\main\add_comment.html:4
+msgid "Добавление комментарий"
+msgstr "Adding comments"
+
+#: .\main\templates\main\add_comment.html:7
+msgid "Добавить комментарии"
+msgstr "Adding comment"
+
+#: .\main\templates\main\add_comment.html:15
+#: .\main\templates\main\details_view.html:31
+msgid "Добавить комментарий"
+msgstr "Adding comment"
+
+#: .\main\templates\main\cooperation.html:4
+msgid "Сотрудничество"
+msgstr "Cooperation"
+
+#: .\main\templates\main\cooperation.html:7
+msgid "Информация о сотрудничество"
+msgstr "Information about cooperation"
+
+#: .\main\templates\main\details_view.html:4
+msgid "Достопримечательность"
+msgstr "Attraction"
+
+#: .\main\templates\main\details_view.html:8
+#: .\main\templates\main\index.html:12
+msgid "Тип достопримечательности:"
+msgstr "Attraction type:"
+
+#: .\main\templates\main\details_view.html:9
+#: .\main\templates\main\index.html:13
+msgid "Регион:"
+msgstr "Region:"
+
+#: .\main\templates\main\details_view.html:10
+#: .\main\templates\main\index.html:14
+msgid "Информация:"
+msgstr "Information:"
+
+#: .\main\templates\main\details_view.html:12
+msgid "Комментарии"
+msgstr "Comments"
+
+#: .\main\templates\main\details_view.html:15
+msgid "Пользователь:"
+msgstr "User:"
+
+#: .\main\templates\main\details_view.html:16
+msgid "Тема:"
+msgstr "Subject:"
+
+#: .\main\templates\main\details_view.html:17
+msgid "Сообщение:"
+msgstr "Message:"
+
+#: .\main\templates\main\details_view.html:20
+msgid "Снять с публикации"
+msgstr "Remove from publication"
+
+#: .\main\templates\main\details_view.html:29
+msgid "Пока нет комментариев."
+msgstr "No comments yet."
+
+#: .\main\templates\main\index.html:4
+msgid "Главная страница"
+msgstr "Home page"
+
+#: .\main\templates\main\index.html:15
+msgid "Читать детальнее"
+msgstr "Read more"
+
+#: .\main\templates\main\layout.html:24
+msgid "ГЛАВНАЯ"
+msgstr "HOME"
+
+#: .\main\templates\main\layout.html:25
+msgid "ТУРЫ"
+msgstr "TOURS"
+
+#: .\main\templates\main\layout.html:26
+msgid "О НАС"
+msgstr "ABOUT US"
+
+#: .\main\templates\main\layout.html:27
+msgid "СОТРУДНИЧЕСТВО"
+msgstr "COOPERATION"
+
+#: .\main\templates\main\layout.html:28
+msgid "ДОБАВИТЬ ДОСТОПРИМЕЧАТЕЛЬНОСЬ"
+msgstr "ADD ATTRACTIONS"
+
+#: .\main\templates\main\layout.html:46
+msgid "При возникновение вопросов"
+msgstr "If you have any questions"
+
+#: .\main\templates\main\layout.html:46
+msgid "свяжитесь с нами"
+msgstr "contact us"
+
+#: .\main\templates\main\layout.html:51
+msgid "АВТОРИЗАЦИЯ"
+msgstr "AUTHORIZATION"
+
+#: .\main\templates\main\layout.html:67
+msgid "Изменить язык"
+msgstr "Change Language"
+
+#: .\main\templates\main\layout.html:75
+msgid "Информация"
+msgstr "Information"
+
+#: .\main\templates\main\tours.html:4
+msgid "Туры"
+msgstr "Tours"
+
+#: .\main\templates\main\tours.html:7
+msgid "Информация о турах"
+msgstr "Tours information"

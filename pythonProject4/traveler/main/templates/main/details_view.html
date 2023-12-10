@@ -1,0 +1,32 @@
+{% extends 'main/layout.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "Достопримечательность" %}{% endblock %}
+
+{% block content %}
+    <h1>{{ attraction.attraction}}</h1>
+    <p><strong>{% trans "Тип достопримечательности:" %}</strong> {{ attraction.attraction_type }}</p>
+    <p><strong>{% trans "Регион:" %}</strong> {{ attraction.region }}</p>
+    <p><strong>{% trans "Информация:" %}</strong> {{ attraction.information }}</p>
+
+    <h2>{% trans "Комментарии" %}</h2>
+    {% if attraction.comments.all %}
+            {% for comment in attraction.comments.all %}
+                    <p><strong>{% trans "Пользователь:" %}</strong> {{ comment.user }}</p>
+                    <p><strong>{% trans "Тема:" %}</strong> {{ comment.subject }}</p>
+                    <p><strong>{% trans "Сообщение:" %}</strong> {{ comment.message }}</p>
+                    <form method="post" action="{% url 'unpublish_comment' comment.id %}">
+                        {% csrf_token %}
+                    <button class="btn btn-warning" type="submit">{% trans "Снять с публикации" %}</button><br><br>
+                    </form>
+                    {% if success_message %}
+                        <div id="success-message" class="alert alert-success" role="alert">
+                        {{ success_message }}
+                        </div>
+                    {% endif %}
+            {% endfor %}
+    {% else %}
+        <p>{% trans "Пока нет комментариев." %}</p>
+    {% endif %}
+    <a class='button' href='{% url "add_comment" attraction.id %}'>{% trans "Добавить комментарий" %}</a>
+{% endblock %}
