@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-nk2jx3+*&9+bw#d+bg@r5o1ews!yz!e)k4jk4-bo#!lq9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['erlanpi.pythonanywhere.com',]
 
 
 # Application definition
@@ -140,6 +140,9 @@ LOCALE_PATHS = [
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_URL = '/media/'
+STATIC_ROOT = '/home/erlanpi/static'
+MEDIA_ROOT = '/home/erlanpi/media'
 
 STATICFILES_DIRS = [
     BASE_DIR / "static"
